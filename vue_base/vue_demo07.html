@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- view层 模板 -->
+	<div id = "hah">
+
+		<!-- 组件： 传递给组件中的值props -->
+		<cc v-for = "item in items" v-bind:val = "item"></cc>
+	</div>
+
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+		
+		Vue.component("cc", {
+			props: ['val'],                          // 使用props传递参数
+			template: "<li> {{val}} </li>"
+
+		});
+		var vm = new Vue({
+			el: "#hah",
+			data: {
+				items: ['java', 'python', 'js', "go"]
+			}
+		})
+	</script>
+	
+</body>
+</html>

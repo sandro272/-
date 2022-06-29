@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+</head>
+<body>
+	<form action = "#" method = "post">
+
+		<div>
+			<span>用户名： </span><input type = "text" name = "username" id="username">
+		</div>
+		<div>
+			<span>密码： </span><input type= "password" name="pwd" id = "pwd">
+		<form action = "#" method = "post">
+
+		<div><span>用户名： </span><input type = "text" name = "username" id="username"></div>
+		<div><span>密码： </span><input type= "password" name="pwd" id = "pwd"></div>
+
+		<!-- 绑定事件 onclick被点击 -->
+		<!-- <div><input type = "submit" name = "提交" onclick = "trigger()"></div> -->
+		<button type = "submit" onclick  ="trigger()">提交</button>
+
+	</form>
+
+	<script type="text/javascript">
+			function trigger(){
+				var username = document.getElementById("username");
+				var pwd = document.getElementById('pwd');
+
+				// MD5算法
+				pwd.value = md5(pwd.value)
+
+			}
+			
+	</script></div>
+
+		<!-- 绑定事件 onclick被点击 -->
+		<!-- <div><input type = "submit" name = "提交" onclick = "trigger()"></div> -->
+		<button type = "submit" onclick  ="trigger()">提交</button>
+
+	</form>
+
+	<script type="text/javascript">
+			function trigger(){
+				var username = document.getElementById("username");
+				var pwd = document.getElementById('pwd');
+
+				// MD5算法
+				pwd.value = md5(pwd.value)
+
+			}
+			
+	</script>
+	
+</body>
+</html>

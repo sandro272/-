@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id="app">
+
+		请选择：
+		<select v-model = "selected">
+			<option value = "" disabled>--请选择--</option>
+			<option> A </option>
+			<option> B </option>
+			<option> C </option>
+			<option> D </option>
+		</select>
+
+		<br/>
+		<span> value: {{selected}}</span>
+	</div>
+
+
+
+	<!-- 如果v-model 表达式的初始值未能匹配任何选项，<select>元素将被渲染为"未选中"状态 -->
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				selected: ''
+			}
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id = "book_list">
+		<!-- <h3>书籍列表</h3>
+		<ol>
+			<li>红楼梦</li>
+			<li>水浒传</li>
+			<li>三国演义</li>
+		</ol> -->
+
+		<todo_title slot = "todo_title" v-bind:tit = "title"></todo_title>      <!-- v-bind:title = "title"      缩写 :title = "title" -->
+		<todo_item slot = "todo_item" v-for = "item in items" :item="item"></todo_item>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+
+
+		// 插槽slot
+		Vue.component("todo", {
+			template: '<div>' + '<slot name = "todo_title"></slot>' + '<ol>' + '<slot name = "todo_item"></slot>' + '</ol>' + '</div>'
+		});
+
+		Vue.component("todo_title", {
+			props: ['tit'],
+			template: '<div> {{tit}} </div>'
+		});
+		
+		Vue.component("todo_item", {
+			props: ['item'],
+			template: '<li> {{item}} </li>'
+
+		});
+
+		var app = new Vue({
+			el: "#book_list",
+			data: {
+				title: "书籍清单",
+				items: ["水浒传", "三国演义", "红楼梦", "西游记"]
+			}
+		})
+	</script>
+	
+</body>
+</html>

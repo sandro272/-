@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		// var alex = {
+		// 	name: "jack",
+		// 	birth: 1995,
+		// 	age: function(){
+		// 		var now = new Date().getFullYear();
+		// 		return now - this.birth;
+		// 	}
+		// }
+
+		function getAge(){
+			var now = new Date().getFullYear();
+			return now - this.birth;
+		}
+
+		var someBody = {
+			name: "ethan",
+			birth: 2000,
+			age: getAge
+		}
+
+		console.log(getAge.apply(someBody, []) )  // this指向someBody, 参数为空
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

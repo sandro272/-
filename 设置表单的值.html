@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<form method = "post">
+		<span>用户名： </span><input type = "text" name = "username" id = "name">
+
+
+		<div>
+			<span>性别： </span>
+			<input type="radio" name = "gender" value = "male" id = "boy" checked>男
+			<input type="radio" name = "gender" value = "female" id = "girl">女
+			
+		</div>
+	</form>
+	
+
+	<script>
+		var username = document.getElementById('name')
+
+		// 通过username.value获取值
+		username.value;
+		// 通过username.value修改值
+		username.value = "csac";
+
+
+		var 
+			male = document.getElementById('boy'),
+			female = document.getElementById('girl');
+
+		// 对于单选框还是多选框使用male.value 或者female.value只能获取单前本身的值，
+		female.checked;                   // 查看返回的结果，是否为true，即是否被选中
+		female.checked = true;
+
+	</script>
+</body>
+</html>

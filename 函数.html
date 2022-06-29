@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+
+		// 定义方式一
+		// function abs (x){
+		// 	if (x >= 0) {
+		// 		return x;
+		// 	} else {
+		// 		return -x;
+		// 	}
+		// }
+
+		// 定义方式二
+		// var abs = function(x){
+		// 	// 手动抛出异常
+		// 	if(typeof(x) !== 'number'){
+		// 		throw 'not a number';
+		// 	};
+		// 	if (x >= 0) {
+		// 		return x;
+		// 	}	else {
+		// 		return -x;
+		// 	}
+		// }
+
+
+		var abs = function(x){
+
+			console.log("x>>" + x);
+			for(var i = 0; i < arguments.length; i++){
+				console.log(arguments[i]);
+			}
+
+
+			if (x >= 0) {
+				return x;
+			} else {
+				return -x;
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

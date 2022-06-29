@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style type="text/css">
+		/*后代选择器*/
+		/*body p {
+			background: #FFA07A;
+		}*/
+
+		/*子选择器*/
+		/*body > p {
+			background: #EE82EE;
+		}*/
+
+		/*相邻选择器  只有一个  相邻（向下）*/
+		/*.water + p {
+			background: #66CDAA;
+		}*/
+
+		/*通用选择器 当前选中元素的所有的兄弟元素*/
+		.water~p {
+			background: #B0E0E6;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<p>层次</p>
+	<p class = "water">农夫</p>
+	<p>山泉</p>
+	<p>spring</p>
+	<ul>
+		<li>
+			<p>11</p>
+			<p>22</p>
+		</li>
+		<li>
+			<p>33</p>
+			<p>44</p>
+		</li>
+		<li>
+			<p>55</p>
+			<p>66</p>
+		</li>
+	</ul>
+	
+</body>
+</html>

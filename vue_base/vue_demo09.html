@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id = "app">
+		<div>{{currentTime()}}</div>
+		<div>{{currentTime01}}</div>
+		
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: "#app",
+
+			data: {
+				msg: "hi, bro",
+			},
+
+			methods: {
+				currentTime: function () {
+					return Date.now();
+				} 
+			},
+			// 计算属性可以想象为缓存    methods和computed中的方法不能重名，重名之后调用的是methods中的方法
+			computed: {
+				currentTime01: function () {
+					this.msg;
+					return Date.now();
+				}
+
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		
+		var date = new Date();           // Date Wed Sep 29 2021 21:41:13 GMT+0800 (中国标准时间)
+		date.getFullYear();               // 年
+		date.getMonth();                  // 月   从0开始，使用时候要+1
+		date.getDate();                   // 日
+		date.getDay();                   // 星期几
+		date.getHours();                 // 小时
+		date.getMinutes();               // 分
+		date.getSeconds();               // 秒
+
+		date.getTime();             // 1632923041909 得到的是时间戳
+
+		console.log(new Date(1632923041909));     // 将时间戳转为 Wed Sep 29 2021 21:44:01 GMT+0800 (中国标准时间)   
+ 		
+
+ 		var now = new Date(1632923041909);
+ 		now.toLocaleString();                           // "2021/9/29 下午9:44:01"
+ 		now.toDateString();                             // "Wed Sep 29 2021"
+ 		now.toTimeString();                              // "21:44:01 GMT+0800 (中国标准时间)"
+ 		now.toUTCString();                               // "Wed, 29 Sep 2021 13:44:01 GMT"
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

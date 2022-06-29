@@ -1,0 +1,43 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+
+		<script>
+			var student = {
+				name: "贰万",
+				age: 22,
+				run: function(){
+					return this.name + " running..."
+				}
+			};
+
+			var xiaoming = {
+				name: "xiaoming"
+			};
+
+
+			// 原型对象  xiaoming的原型是student
+			xiaoming.__proto__ = student;
+
+
+			// var bird = {
+			// 	fly: function () {
+			// 		return " fly..."
+			// 	}
+			// };
+
+			// xiaoming.__proto__ = bird;
+
+			
+
+			
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+	</html>

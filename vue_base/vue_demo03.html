@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<div id = "for_cycle">
+		<p v-if = "isOk"> ok </p>
+		<p v-else> do not ok </p>
+	</div>
+
+
+	<div id = "cycle">
+		<p v-if = "score === 'A'">A</p>
+
+		<p v-else-if = "score === 'B'">B</p>
+
+		<p v-else-if = "score === 'C'">C</p>
+
+		<p v-else>D</p>	
+	</div>
+
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+	<script>
+		var app01 = new Vue({
+			el: "#for_cycle",
+			data: {
+				isOk: false
+			}
+		})
+
+
+		var app02 = new Vue({
+			el: "#cycle",
+			data: {
+				score: 'F'
+			}
+		})
+	</script>
+	
+</body>
+</html>

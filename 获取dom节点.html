@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id = "div_block">
+		<h1>title</h1>
+		<p id = "first">p1</p>
+		<p class = "second">p2</p>
+	</div>
+
+
+	<script>
+		var block = document.getElementById('div_block');
+		var headline = document.getElementsByTagName('h1');
+		var fir = document.getElementById('first');
+		var sec = document.getElementsByClassName("second")
+
+		var childrens = block.children;           // class没有这个属性
+
+		// fir.nextElementSibling
+		// block.firstElementChild
+		// block.children
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style type="text/css">
+		div {
+			height: 300px;
+			width: 800px;
+			border: 1px solid rgb(208, 236, 231);
+			background-image: url("../images/rabbit.png");    /* 默认全部平铺*/
+		}
+
+		.div01 {
+			background-repeat: repeat-y;     /*纵向方向平铺*/
+		}
+
+		.div02 {
+			background-repeat: repeat-x;      /*横向平铺平铺*/
+		}
+
+		.div03 {
+			background-repeat:  no-repeat;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="div01">模块01</div>
+	<div class="div02">模块02</div>
+	<div class="div03">模块03</div>
+	
+</body>
+</html>

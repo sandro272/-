@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script crossorigin="anonymous" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" src="https://lib.baomitu.com/jquery/3.6.0/jquery.js"></script>
+
+	<style type="text/css">
+		#divMove {
+			width: 300px;
+			height: 300px;
+			border: 1px solid blue;
+
+		}
+	</style>
+</head>
+<body>
+
+	mouse: <span id = "mouseMove"></span>
+
+	<div id = "divMove">
+		在这里移动鼠标试试
+	</div>
+	
+
+	<script type="text/javascript">
+		// 当网页元素加载完毕之后，响应事件
+		// $(document).ready(function () {
+
+		// })
+
+		$(function(){
+			$('#divMove').mousemove(function(e){
+				$('#mouseMove').text('x:' + e.pageX + 'y:' + e.pageY)
+				// console.log(e.pageX)
+			})
+		})
+
+	</script>
+</body>
+</html>

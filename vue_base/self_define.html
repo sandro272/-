@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<div id = "app">
+		<todo_title slot = "headline" v-bind:ti = 'title'></todo_title>      <!-- v-bind:传递参数 = data.title -->
+		<todo_item slot = "content" v-for = "(item, index) in items" v-bind:element = item v-bind:inde = index v-on:remove = "del_item(index)"></todo_item>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+
+		Vue.component("todo", {
+			template: '<div>' + '<slot name = "headline"></slot>' + '<ol>'+ '<slot name = "content"></slot>' + '</ol>' + '</div>'
+
+		});
+
+
+		Vue.component("todo_title", {
+			props: ['ti'],
+			template: '<di> {{ti}} </di>'
+		});
+
+
+		Vue.component("todo_item", {      //  v-on:缩写为@  组件里想要直接使用sd对象中的方法是不可能的，只能通过视图即#pp间接调用
+			props: ['element', 'inde'],
+			template: '<li> {{element}} <button @click = "del">删除</button> </li>', 
+			methods: {
+				del: function (inde) {
+					// alert('111');
+					this.$emit('remove', inde);                          // 自定义事件分发
+				}
+			}
+		});
+
+		var sd = new Vue({
+			el: "#app",
+			data: {
+				title: "清单",
+				items: ["水浒传", "三国演义", "红楼梦", "西游记"]
+			},
+			methods: {
+				del_item: function (index) {
+
+					// alert('2222');
+					console.log("删除了" + this.items[index]);
+					this.items.splice(index, 1);
+					// splice:从index处删除/增加元素 后面的1代表删除一个,如果是0则代表删除0个，后面还可以添加具体元素（index, num, item）   
+				}
+
+			}
+		})
+	</script>
+	
+</body>
+</html>

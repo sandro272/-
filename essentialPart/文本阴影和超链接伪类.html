@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<style type="text/css">
+		img {
+			width: 80px;
+			height: 80px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+
+		/*a:hover 必须在 CSS 定义中的 a:link 和 a:visited 之后，才能生效！a:active 必须在 CSS 定义中的 a:hover 之后才能生效！伪类名称对大小写不敏感。*/
+
+		/* 未访问的链接 */
+		a:link {
+			color: #F1948A;
+		}
+
+		/* 已访问的链接 */
+		a:visited {
+			color: #C39BD3
+		}
+
+		/* 鼠标悬停链接 */
+		a:hover {
+			color: rgb(115, 198, 182);
+			font-size: 18px;
+		}
+
+		/* 已选择的链接 */
+		a:active {
+		  color: #0000FF;
+		}
+		
+		/*h-shadow 水平阴影距离   v-shadow 垂直阴影距离   blur 模糊距离   color;*/
+		.lang {
+			text-shadow: 5px 5px 5px #F5B041;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- href = “#” 即可实现空链接，即点击没有反应 -->
+	<a href="#">
+		<img src="../images/a.jpg" alt="犬之力">
+	</a>
+
+	<div class = "director">
+		<a href = "#">导演: 简·坎皮恩</a>
+	</div>
+
+	<div class = "lang">
+		<a href = "">语言: 英语</a>
+	</div>
+
+	<div>
+		
+	</div>
+	
+	
+</body>
+</html>

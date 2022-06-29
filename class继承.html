@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		
+		// // ES6之前
+		// function Student(name) {
+		// 	this.name = name;
+		// }
+
+		// // 给student新增一个hello方法
+		// Student.prototype.hello = function (){
+		// 	alert("hello");
+		// }
+
+
+
+		// // ES6之后
+		// // 定义一个学生类
+		// class Student{
+		// 	// 属性
+		// 	constructor(name){
+		// 		this.name = name;
+		// 	};
+		// 	// 方法
+		// 	hello(){
+		// 		alert("hello")
+		// 	}
+
+		// }
+
+		// var xm = new Student("xiaoming");
+		// var hg = new Student("huangta");
+
+
+		class Student{
+			constructor(name){
+				this.name = name;
+			}
+
+			hello () {
+				alert("hello");
+			}
+		};
+
+
+		class littleStudent extends Student {
+			constructor(name, grade){
+				super(name);
+				this.grade = grade;
+			}
+
+			say () {
+				alert("我是一名小学生")
+			}
+		};
+
+		var zhangsan = new Student("zhangsan");
+		var wangmazi = new littleStudent("wangmazi", 3)
+
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

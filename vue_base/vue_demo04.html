@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id = "for_test">
+		<!-- <ol v-for="item in items">
+			{{item.name}}
+		</ol> -->
+
+		<ul v-for="(item, index) in items">
+			{{index}}. {{item.name}}
+		</ul>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script type="text/javascript">
+		
+		var app = new Vue({
+			el: "#for_test",
+			data: {
+				items: [
+					{name: "alex"},
+					{name: "ethan"},
+					{name: "tom"}
+				]
+			}
+		})
+	</script>
+	
+</body>
+</html>

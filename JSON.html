@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script>
+		var user = {
+			name: "alex",
+			age: 22,
+			gender: "男"
+		}
+
+		// 将对象转为json字符串
+		var jsonUser = JSON.stringify(user);    // '{"name":"alex","age":22,"gender":"男"}'
+
+		//将json字符串转为JS对象
+		var oj = JSON.parse('{"name":"alex","age":22,"gender":"男"}')      // {name: 'alex', age: 22, gender: '男'}
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

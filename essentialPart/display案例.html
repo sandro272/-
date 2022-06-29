@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style type="text/css">
+
+		/*
+		block 块元素
+		inline 行内元素
+		inline-block 是块元素，但也可以内联在一起
+		none
+		*/
+
+		div {
+			border: 3PX solid red;
+			width: 100px;
+			height: 100px;
+			/*display: block;             */
+			display: inline-block;
+		}
+
+		span {
+			border: 3px solid yellow;
+			display: inline-block;                  /*当display设置为block时，下面的width和height才有效*/
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+
+</head>
+<body>
+	<div>div元素</div>
+	<span>span元素</span>
+	
+</body>
+</html>

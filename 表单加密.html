@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+	<!-- 表单绑定提交事件
+	onsubmit = 绑定一个提交检测的函数：true或false，将这个结果返回给表单，使用onsubmit接受 -->
+	<form action = "#" method = "post" accept-charset = "utf-8" onsubmit = "return trigger()">
+		<div>
+			<span>用户名：</span><input type = "text" name = "username" id = "username">
+		</div>
+		<div>
+			<span>密码：</span><input type = "password" id = "ipwd">
+		</div>
+		<input type = "hidden" name = "pwd" id = "hpwd">
+		<button type = "submit">提交</button>
+		
+	</form>
+
+	<script>
+		function trigger(){
+			var 
+				username = document.getElementById('username'),
+				input_pwd = document.getElementById('ipwd'),
+				hidden_pwd = document.getElementById("hpwd");
+
+				// input_pwd.value = md5(input_pwd.value);
+				hidden_pwd.value = md5(input_pwd.value);
+
+				// 可以校验判断表单的内容，true就是通过提交，false就是不通过
+				return true;
+
+		}
+	</script>
+	
+</body>
+</html>

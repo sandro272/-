@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <div id = "k">ggg</div>
+	<script>
+		var k = document.getElementById('k');
+	</script> -->
+
+
+	<div id = js>javascript</div>
+	<div id = 'list'>
+		<div id = 'ee'>javaEE</div>
+		<div id = 'se'>javaSE</div>
+		<div id = 'me'>javaME</div>	
+	</div>
+
+	<script>
+		var 
+			js = document.getElementById('js'),
+			lis = document.getElementById('list');
+			// lis.appendChild(js)   // 追加
+
+
+			// 创建一个新的节点div
+			var newDiv = document.createElement("div");   
+			newDiv.id = "nd";
+			newDiv.innerText = "hello, man";
+			lis.appendChild(newDiv)
+
+			// 创建一个标签节点
+			var myScript = document.createElement("script");
+			myScript.setAttribute('type', 'text/javascript');
+
+
+			// 创建一个style标签
+			var myStyle = document.createElement("style");
+			myStyle.setAttribute("type", "text/css");
+			myStyle.innerHTML = "body{background-color: gray;}";                           // 设置标签内容
+
+			document.getElementsByTagName("head")[0].appendChild(myStyle)
+
+	</script>
+</body>
+</html>

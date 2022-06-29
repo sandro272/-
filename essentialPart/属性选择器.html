@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style type="text/css">
+		p a {
+			float: left;
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: #D0ECE7;
+			font-size: 16px;
+			text-align: center;
+			text-decoration: none;        /*去除下划线*/
+			color: #F8C471;
+			border-radius: 10px;
+			line-height: 45px; 
+			margin-right: 5px; 
+			/*font: bold 50px/45px 宋体;       字体粗细  字体大小/行高  字体类型  */
+		}
+
+		/*存在id的属性    a[]{} 
+		= 绝对等于
+		*= 包含这个元素
+		^= 以……开头
+		$= 以……结尾
+				*/ 
+
+		/*a[id]{
+			background: #E5E7E9;
+		}*/
+
+		/*a[id = first]{
+			background: #E8DAEF ;
+		}*/
+
+		/*a[class = "links item demo"]{
+			background: #F2D7D5;
+		}*/
+
+		/*a[class *= "links"]{
+			background: #D6EAF8;
+		}*/
+
+		/*a[href ^= http]{
+			background: #FDF2E9;
+		}*/
+
+		a[href $= jpg]{
+			background: #FDF2E9;
+		}
+
+		
+	</style>
+	
+
+
+</head>
+
+<body>
+	<p>
+		<a href = "http://www.baidu.com/" class = "links item demo" id = "first"> A </a>
+		<a href = "http://htmlcolorcodes.com" class = "links item active" target = "_blank" title = "test"> B </a>
+		<a href = "http://zhuanlan.zhihu.com"> C </a>
+		<a href = "image/jd.png" class = "links item"> D </a>
+		<a href = "image/al.jpg" class = "links item"> E </a>
+		<a href = "image/wy.gif" class = "links item"> F </a>
+		<a href = "abc" class = "links item"> G </a>
+		<a href = "files/123.pdf" class = "links item"> H </a>
+		<a href = "files/resume.pdf" class = "links item"> I </a>
+		<a href = "files/simple.doc" class = "links item"> J </a>
+		<a href = "files/past.doc" class = "links item last"> K </a>
+	</p>
+	
+</body>
+</html>

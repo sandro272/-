@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		人神论
+	</div>
+
+
+	<!-- view层 模板 -->
+	<div id = "app">
+		{{message}}                              <!-- 渲染过程：先经过模板{{message}} 再到hello, first Vue -->
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: "#app",
+
+			// model层：数据
+			data: {
+				message: "hello, first Vue"
+			}
+			
+		})
+
+
+		// 通过在浏览器中使用vm.message = "xxx"可以看到，不用通过刷新页面就可以改变页面中数数据显示
+	</script>
+</body>
+</html>

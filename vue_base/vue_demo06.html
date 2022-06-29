@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<div id = "app">
+		<zcj></zcj>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+
+		// 定义一个Vue组件component
+		Vue.component("zcj", {
+			template: '<ol>hello</ol>'                // 使用<zcj></zcj>代替<ol>hello</ol>
+
+		});
+
+		var vm = new Vue({
+			el: "#app",
+			data: {}
+
+		})
+		
+	</script>
+
+</body>
+</html>

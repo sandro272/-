@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>列表框文本域和文件域</title>
+</head>
+<body>
+	<form method = "get" action = "demo01.html">
+
+
+		<!-- 可选框-->
+		<p>国籍：
+			<select name = "country">
+				<option value = "china">中国</option>
+				<option value = "USA">美国</option>
+				<option value = "korea">韩国</option>
+				<option value = "japan" selected>日本</option>
+			</select>
+		</p>
+
+		<!--- 文本域-->
+		<p>反馈：
+			<textarea name = "textarea" rows = "10" cols = "40">反馈内容...</textarea>
+		</p>
+
+
+		<!-- 文件域-->
+		<p>
+			<input type = "file" name = "files">
+			<input type = "button" name = "upload" value = "上传文件">
+		</p>
+		
+
+		<!-- 邮件验证-->
+		<p>邮箱地址：
+			<input type = "email" name = "email">
+		</p>
+
+
+		<!-- URL-->
+		<p>链接：
+			<input type = "url" name = "url">
+		</p>
+
+
+		<!-- 数字-->
+		<p>数字选择：
+			<input type = "number" name = "num" value = "0" max = "100" min = "0" step = "2">
+		</p>
+
+
+		<!-- 滑块-->
+		<p>音量：
+			<input type = "range" name = "voice" min = "0" max = "100">
+		</p>
+
+
+		<!-- 搜索框-->
+		<p>搜索：
+			<input type = "search" name = "search" id = "search01">
+		</p>
+
+		<!-- 增强鼠标可用性-->
+		<p>
+			<label for = "search01">你点我试试</label>
+		</p>
+
+
+
+		<p>
+			<input type = "submit" name="提交">
+			<input type= "reset" name = "重置">
+		</p>
+
+
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div id = "test">
+		<!-- 姓名：<input type = "text" name = "name" v-model = "msg"> {{msg}} -->
+
+		<p>性别：</p>
+		<!-- <input type = "radio" name = "sex" value = "male" checked = "checked">男 -->
+		<input type = "radio" name = "sex" value = "male" v-model = "gen">男
+		<input type = "radio" name = "sex" value= "female" v-model = "gen">女
+
+		<p> 选中了：{{gen}} </p>
+	</div>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script>
+		var ap = new Vue({
+			el: "#test",
+			data: {
+				// msg: "haha",
+				gen: '',
+			}
+		});
+	</script>
+</body>
+</html>

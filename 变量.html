@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+</head>
+<body>
+
+
+	<script>
+
+		// function trial(){
+		// 	var x = 1;
+		// 	x = x + 1;
+		// }
+
+		// x = x * 3;             // ReferenceError: x is not defined
+
+
+
+		// function trial01 (){
+		// 	var x = 1;
+		// 	x = x + 1; 
+		// }
+
+		// function trial02 (){
+		// 	var x = 'a';
+		// 	x = x + 'b';
+		// }
+
+
+
+		// function trial03() {
+		// 	var a = 3;
+
+		// 	// 内部函数可以访问外部函数所声明的成员，但是反之不可以
+		// 	function innerF () {
+		// 		var b = a + 1;
+		// 	};
+
+		// 	var c = b + 1;          // Uncaught ReferenceError: b is not defined
+
+		// }
+
+
+
+
+		// function test01() {
+		// 	var x = 'a';
+
+		// 	function innerTest(){
+		// 		var x = 'b';
+		// 		console.log("inner>>" + x);
+		// 	};
+		// 	console.log("outer>>" + x);
+		// 	// innerTest();
+		// }
+
+		// test01();
+
+
+
+		// function test02(){
+		// 	var x = 'a ' + y;
+		// 	console.log(x);
+		// 	var y = 'b';
+		// }
+		// // 等价于
+		// function test03() {
+		// 	// var x, y, z,...   定义多个变量
+		// 	var y;
+		// 	var x = 'a ' + y;
+		// 	console.log(x);
+		// 	y = 'b';
+		// }
+
+
+
+		// // 全局变量
+		// var global_viriable = 12;
+		// function test04(){
+		// 	console.log(global_viriable);
+		// };
+		// test04();
+		// console.log(global_viriable);
+
+
+
+		var x = 'hello';
+		// alert(x);
+		// alert(window.x)          // 默认所有的全局变量，都会自动绑定在window对象上
+
+		// window.alert(x);
+		// window.alert(window.x)
+
+		window.alert(x);
+		var old_alert = window.alert;
+		// old_alert(x);
+
+		window.alert = function(){
+		};
+
+		// alert()失效
+		window.alert(123);
+
+		// 恢复
+		window.alert = old_alert;
+		window.alert(345);
+
+
+	</script>
+</body>
+</html>

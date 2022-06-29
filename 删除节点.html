@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<div id = "box">
+		<div id = "first">1</div>
+		<div class = "second">2</div>
+		<div>3</div>
+	</div>
+
+	<script>
+		var self = document.getElementById("first");
+		var parent = first.parentElement;
+		parent.removeChild(self)
+
+		// 动态的删除
+		parent.removeChild(parent.children[0])
+		parent.removeChild(parent.children[0])
+		parent.removeChild(parent.children[1])
+
+	</script>
+	
+</body>
+</html>
